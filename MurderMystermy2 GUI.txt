@@ -1,0 +1,479 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Fly
+local DeadGUI = Instance.new("ScreenGui")
+local Menu = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local DeadGUI_exit = Instance.new("TextButton")
+local TextButton = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
+local TextButton_3 = Instance.new("TextButton")
+local TextButton_4 = Instance.new("TextButton")
+local TextButton_5 = Instance.new("TextButton")
+local TextButton_6 = Instance.new("TextButton")
+local TextButton_7 = Instance.new("TextButton")
+local TextButton_8 = Instance.new("TextButton")
+local Murder = Instance.new("Frame")
+local Sherif = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local Frame = Instance.new("Frame")
+local OK = Instance.new("TextButton")
+local TextLabel_4 = Instance.new("TextLabel")
+local TextBox = Instance.new("TextBox")
+local TextButton_9 = Instance.new("TextButton")
+local TextButton_10 = Instance.new("TextButton")
+local TextButton_11 = Instance.new("TextButton")
+
+--Properties:
+
+DeadGUI.Name = "Dead-GUI"
+DeadGUI.Parent = game.CoreGui
+DeadGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Menu.Name = "Menu"
+Menu.Parent = DeadGUI
+Menu.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Menu.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Menu.Position = UDim2.new(0.108801953, 0, 0.170777991, 0)
+Menu.Size = UDim2.new(0, 640, 0, 393)
+Menu.SizeConstraint = Enum.SizeConstraint.RelativeYY
+Menu.Style = Enum.FrameStyle.RobloxRound
+Menu.Active = true
+Menu.Draggable = true
+
+TextLabel.Parent = Menu
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.11937499, 0, -0.000103589613, 0)
+TextLabel.Size = UDim2.new(0, 473, 0, 35)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Dead GUI-Murder Mystermy 2"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 64.000
+TextLabel.TextWrapped = true
+
+DeadGUI_exit.Name = "DeadGUI_exit"
+DeadGUI_exit.Parent = Menu
+DeadGUI_exit.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+DeadGUI_exit.Position = UDim2.new(0.945500016, 0, 0.000795010477, 0)
+DeadGUI_exit.Size = UDim2.new(0, 31, 0, 26)
+DeadGUI_exit.Font = Enum.Font.SciFi
+DeadGUI_exit.Text = "X"
+DeadGUI_exit.TextColor3 = Color3.fromRGB(0, 0, 0)
+DeadGUI_exit.TextScaled = true
+DeadGUI_exit.TextSize = 14.000
+DeadGUI_exit.TextWrapped = true
+DeadGUI_exit.MouseButton1Down:connect (function ()
+	Menu.Visible = false
+	TextButton_11.Visible = true
+end)
+
+TextButton.Parent = Menu
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 247, 0)
+TextButton.Position = UDim2.new(0.0116796978, 0, 0.20975858, 0)
+TextButton.Size = UDim2.new(0, 140, 0, 32)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Esp-On"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+TextButton_2.Parent = Menu
+TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 247, 0)
+TextButton_2.Position = UDim2.new(0.269492179, 0, 0.20975858, 0)
+TextButton_2.Size = UDim2.new(0, 140, 0, 32)
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.Text = "Esp-Off"
+TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 14.000
+TextButton_2.TextWrapped = true
+
+TextButton_3.Parent = Menu
+TextButton_3.BackgroundColor3 = Color3.fromRGB(255, 247, 0)
+TextButton_3.Position = UDim2.new(0.522617161, 0, 0.20975858, 0)
+TextButton_3.Size = UDim2.new(0, 140, 0, 32)
+TextButton_3.Font = Enum.Font.SourceSans
+TextButton_3.Text = "TP-Gun"
+TextButton_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_3.TextScaled = true
+TextButton_3.TextSize = 14.000
+TextButton_3.TextWrapped = true
+
+TextButton_4.Parent = Menu
+TextButton_4.BackgroundColor3 = Color3.fromRGB(255, 247, 0)
+TextButton_4.Position = UDim2.new(0.771054685, 0, 0.20975858, 0)
+TextButton_4.Size = UDim2.new(0, 140, 0, 32)
+TextButton_4.Font = Enum.Font.SourceSans
+TextButton_4.Text = "TP-Murder"
+TextButton_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_4.TextScaled = true
+TextButton_4.TextSize = 14.000
+TextButton_4.TextWrapped = true
+
+TextButton_5.Parent = Menu
+TextButton_5.BackgroundColor3 = Color3.fromRGB(255, 247, 0)
+TextButton_5.Position = UDim2.new(0.0101171853, 0, 0.336985022, 0)
+TextButton_5.Size = UDim2.new(0, 140, 0, 32)
+TextButton_5.Font = Enum.Font.SourceSans
+TextButton_5.Text = "TP-Sherif"
+TextButton_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_5.TextScaled = true
+TextButton_5.TextSize = 14.000
+TextButton_5.TextWrapped = true
+
+TextButton_6.Parent = Menu
+TextButton_6.BackgroundColor3 = Color3.fromRGB(255, 247, 0)
+TextButton_6.Position = UDim2.new(0.267929673, 0, 0.336985022, 0)
+TextButton_6.Size = UDim2.new(0, 140, 0, 32)
+TextButton_6.Font = Enum.Font.SourceSans
+TextButton_6.Text = "Fly (E)"
+TextButton_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_6.TextScaled = true
+TextButton_6.TextSize = 14.000
+TextButton_6.TextWrapped = true
+TextButton_6.MouseButton1Down:connect (function ()
+	repeat wait() 
+	until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("HumanoidRootPart") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid") 
+	local mouse = game.Players.LocalPlayer:GetMouse() 
+	repeat wait() until mouse
+	local plr = game.Players.LocalPlayer 
+	local torso = plr.Character.HumanoidRootPart 
+	local flying = true
+	local deb = true 
+	local ctrl = {f = 0, b = 0, l = 0, r = 0} 
+	local lastctrl = {f = 0, b = 0, l = 0, r = 0} 
+	local maxspeed = 50 
+	local speed = 0 
+
+	function Fly() 
+		local bg = Instance.new("BodyGyro", torso) 
+		bg.P = 9e4 
+		bg.maxTorque = Vector3.new(9e9, 9e9, 9e9) 
+		bg.cframe = torso.CFrame 
+		local bv = Instance.new("BodyVelocity", torso) 
+		bv.velocity = Vector3.new(0,0.1,0) 
+		bv.maxForce = Vector3.new(9e9, 9e9, 9e9) 
+		repeat wait() 
+			plr.Character.Humanoid.PlatformStand = true 
+			if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then 
+				speed = speed+.5+(speed/maxspeed) 
+				if speed > maxspeed then 
+					speed = maxspeed 
+				end 
+			elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then 
+				speed = speed-1 
+				if speed < 0 then 
+					speed = 0 
+				end 
+			end 
+			if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then 
+				bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
+				lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r} 
+			elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then 
+				bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
+			else 
+				bv.velocity = Vector3.new(0,0.1,0) 
+			end 
+			bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0) 
+		until not flying 
+		ctrl = {f = 0, b = 0, l = 0, r = 0} 
+		lastctrl = {f = 0, b = 0, l = 0, r = 0} 
+		speed = 0 
+		bg:Destroy() 
+		bv:Destroy() 
+		plr.Character.Humanoid.PlatformStand = false 
+	end 
+	mouse.KeyDown:connect(function(key) 
+		if key:lower() == "e" then 
+			if flying then flying = false 
+			else 
+				flying = true 
+				Fly() 
+			end 
+		elseif key:lower() == "w" then 
+			ctrl.f = 1 
+		elseif key:lower() == "s" then 
+			ctrl.b = -1 
+		elseif key:lower() == "a" then 
+			ctrl.l = -1 
+		elseif key:lower() == "d" then 
+			ctrl.r = 1 
+		end 
+	end) 
+	mouse.KeyUp:connect(function(key) 
+		if key:lower() == "w" then 
+			ctrl.f = 0 
+		elseif key:lower() == "s" then 
+			ctrl.b = 0 
+		elseif key:lower() == "a" then 
+			ctrl.l = 0 
+		elseif key:lower() == "d" then 
+			ctrl.r = 0 
+		end 
+	end)
+	Fly()
+end)
+
+TextButton_7.Parent = Menu
+TextButton_7.BackgroundColor3 = Color3.fromRGB(255, 247, 0)
+TextButton_7.Position = UDim2.new(0.521054685, 0, 0.336985022, 0)
+TextButton_7.Size = UDim2.new(0, 140, 0, 32)
+TextButton_7.Font = Enum.Font.SourceSans
+TextButton_7.Text = "Reviz Admin"
+TextButton_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_7.TextScaled = true
+TextButton_7.TextSize = 14.000
+TextButton_7.TextWrapped = true
+TextButton_7.MouseButton1Down:connect (function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Goldfare/Reviz-Admin-Roblox-FE-Admin-Script---For-Goldfare/main/Reviz%20Admin",true))()
+end)
+
+TextButton_8.Parent = Menu
+TextButton_8.BackgroundColor3 = Color3.fromRGB(255, 247, 0)
+TextButton_8.Position = UDim2.new(0.769492209, 0, 0.336985022, 0)
+TextButton_8.Size = UDim2.new(0, 140, 0, 32)
+TextButton_8.Font = Enum.Font.SourceSans
+TextButton_8.Text = "Murder Mystermy GUI"
+TextButton_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_8.TextScaled = true
+TextButton_8.TextSize = 14.000
+TextButton_8.TextWrapped = true
+TextButton_8.MouseButton1Down:connect (function ()
+	loadstring(game:GetObjects("rbxassetid://4001118261")[1].Source)()
+end)
+
+Murder.Name = "Murder"
+Murder.Parent = Menu
+Murder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Murder.Position = UDim2.new(0.610937536, 0, 0.712468147, 0)
+Murder.Size = UDim2.new(0, 100, 0, 100)
+
+Sherif.Name = "Sherif"
+Sherif.Parent = Menu
+Sherif.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sherif.Position = UDim2.new(0.824999988, 0, 0.712468147, 0)
+Sherif.Size = UDim2.new(0, 100, 0, 100)
+
+TextLabel_2.Parent = Menu
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.Position = UDim2.new(0.824421883, 0, 0.628660619, 0)
+TextLabel_2.Size = UDim2.new(0, 101, 0, 22)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Sherif-NOT WORK"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+TextLabel_3.Parent = Menu
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.Position = UDim2.new(0.609726608, 0, 0.631101549, 0)
+TextLabel_3.Size = UDim2.new(0, 99, 0, 22)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "Murder-NOT WORK"
+TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+
+Frame.Parent = Menu
+Frame.BackgroundColor3 = Color3.fromRGB(255, 10, 14)
+Frame.Position = UDim2.new(0.291202933, 0, 0.547780871, 0)
+Frame.Size = UDim2.new(0, 177, 0, 94)
+Frame.Style = Enum.FrameStyle.RobloxRound
+
+OK.Name = "OK"
+OK.Parent = Frame
+OK.BackgroundColor3 = Color3.fromRGB(39, 50, 57)
+OK.Position = UDim2.new(0.029995352, 0, 1.19181097, 0)
+OK.Size = UDim2.new(0, 151, 0, 33)
+OK.Font = Enum.Font.Cartoon
+OK.Text = "Set Speed"
+OK.TextColor3 = Color3.fromRGB(255, 255, 255)
+OK.TextScaled = true
+OK.TextSize = 42.000
+OK.TextWrapped = true
+OK.MouseButton1Down:connect (function ()
+	script.Parent.MouseButton1Click:Connect(function()
+		local plr = game.Players.LocalPlayer
+		local char = plr.Character
+		local hum = char.Humanoid
+		hum.WalkSpeed = script.Parent.Parent.TextBox.Text
+	end)
+end)
+
+TextLabel_4.Parent = Frame
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 2.000
+TextLabel_4.Position = UDim2.new(-0.128344163, 0, -0.118701279, 0)
+TextLabel_4.Size = UDim2.new(0, 208, 0, 54)
+TextLabel_4.Font = Enum.Font.Cartoon
+TextLabel_4.Text = "WalkSpeed"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextSize = 28.000
+
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(48, 84, 97)
+TextBox.Position = UDim2.new(0.0662448108, 0, 0.564767957, 0)
+TextBox.Size = UDim2.new(0, 138, 0, 37)
+TextBox.Font = Enum.Font.Cartoon
+TextBox.Text = "16"
+TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.TextSize = 30.000
+
+TextButton_9.Parent = Menu
+TextButton_9.BackgroundColor3 = Color3.fromRGB(255, 247, 0)
+TextButton_9.Position = UDim2.new(0.0101171974, 0, 0.601616085, 0)
+TextButton_9.Size = UDim2.new(0, 140, 0, 32)
+TextButton_9.Font = Enum.Font.SourceSans
+TextButton_9.Text = "Invisible-Cooming Soon"
+TextButton_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_9.TextScaled = true
+TextButton_9.TextSize = 14.000
+TextButton_9.TextWrapped = true
+TextButton_9.MouseButton1Down:connect (function ()
+	print("Invisible Is Not Working !!!")
+	wait(0.1)
+	print("----------------------------------")
+end)
+
+TextButton_10.Parent = Menu
+TextButton_10.BackgroundColor3 = Color3.fromRGB(255, 247, 0)
+TextButton_10.Position = UDim2.new(0.0101171853, 0, 0.466756046, 0)
+TextButton_10.Size = UDim2.new(0, 140, 0, 32)
+TextButton_10.Font = Enum.Font.SourceSans
+TextButton_10.Text = "TP-Lobby"
+TextButton_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_10.TextScaled = true
+TextButton_10.TextSize = 14.000
+TextButton_10.TextWrapped = true
+
+TextButton_11.Parent = DeadGUI
+TextButton_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_11.Position = UDim2.new(0.870159268, 0, 0.265654713, 0)
+TextButton_11.Size = UDim2.new(0, 105, 0, 27)
+TextButton_11.Font = Enum.Font.SourceSans
+TextButton_11.Text = "Dead GUI"
+TextButton_11.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_11.TextScaled = true
+TextButton_11.TextSize = 14.000
+TextButton_11.TextWrapped = true
+TextButton_11.MouseButton1Down:connect (function ()
+	Menu.Visible = true
+    TextButton_11.Visible = false	
+end)
+
+-- Scripts:
+
+local function NRALH_fake_script() -- OK.LocalScript 
+	local script = Instance.new('LocalScript', OK)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local plr = game.Players.LocalPlayer
+	    local char = plr.Character
+	    local hum = char.Humanoid
+		hum.WalkSpeed = script.Parent.Parent.TextBox.Text
+	end)
+end
+coroutine.wrap(NRALH_fake_script)()
+
+
+-- TO Sherriff button
+
+script.Parent.TextButton_5.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = sherrif().Character.HumanoidRootPart.CFrame
+end)
+
+-- FUNCTIONS
+function murderer()
+	for i, v in pairs(game.Players:children()) do
+		if  v.Backpack:findFirstChild("Knife") or v.Character:findFirstChild("Knife") then
+			return v
+		end
+	end
+end
+
+function sherrif()
+	for i, v in pairs(game.Players:children()) do
+		if  v.Backpack:findFirstChild("Gun") or v.Character:findFirstChild("Gun") then
+			return v
+		end
+	end
+end
+
+-- TO Murderer Button
+
+script.parent.TextButton_4.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = murderer().Character.HumanoidRootPart.CFrame
+end)
+
+-- TO LOBBY BUTTON
+
+script.Parent.TextButton_10.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Lobby.Radio.CFrame
+end)
+
+-- BRING GUN BUTTON
+
+script.Parent.TextButton_3.MouseButton1Down:connect(function()
+	if game.Workspace:FindFirstChild("GunDrop") then
+		game.Workspace.GunDrop.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	end
+end)
+
+-- ESP ON BUTTON
+
+script.Parent.TextButton.MouseButton1Down:connect(function()
+	for i, v in pairs(game.Players:children()) do
+		if v.Backpack:findFirstChild("Knife") or v.Character:findFirstChild("Knife") then
+			local esp = Instance.new("BoxHandleAdornment")
+			esp.Parent = v.Character.Head
+			esp.Size = Vector3.new(1,1,1)
+			esp.Color3 = Color3.new(255, 0, 0)
+			esp.AlwaysOnTop = true
+			esp.Adornee = v.Character.Head
+			esp.Visible = true
+			esp.ZIndex = 2
+
+		elseif v.Backpack:findFirstChild("Gun") or v.Character:findFirstChild("Gun") then
+			local esp = Instance.new("BoxHandleAdornment")
+			esp.Parent = v.Character.Head
+			esp.Size = Vector3.new(1,1,1)
+			esp.Color3 = Color3.new(0, 0, 255)
+			esp.AlwaysOnTop = true
+			esp.Adornee = v.Character.Head
+			esp.Visible = true
+			esp.ZIndex = 2
+		else
+			local esp = Instance.new("BoxHandleAdornment")
+			esp.Parent = v.Character.Head
+			esp.Size = Vector3.new(1,1,1)
+			esp.Color3 = Color3.new(0, 255, 0)
+			esp.AlwaysOnTop = true
+			esp.Adornee = v.Character.Head
+			esp.Visible = true
+			esp.ZIndex = 2
+		end
+
+	end
+
+end)
+
+-- ESP OFF BUTTON
+
+script.Parent.TextButton_2.MouseButton1Down:connect(function()
+	for i, v in pairs(game.Players:children()) do
+		for i, a in pairs(v.Character.Head:children()) do
+			if a.ClassName == "BoxHandleAdornment" then
+				a:remove()
+			end
+		end
+	end
+end)
